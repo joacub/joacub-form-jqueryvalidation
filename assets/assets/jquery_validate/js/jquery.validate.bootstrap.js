@@ -64,7 +64,7 @@ $.extend($.validator.defaults, {
             $(element).closest('div').parent('div').removeClass(errorClass).addClass(validClass);
         } else {
             $(element).closest('div.control-group').removeClass(errorClass).addClass(validClass);
-            $(element).next('span.help-inline').text('');
+            //$(element).next('span.help-inline').text('');
         }
     },
     errorPlacement: function(error, element) {

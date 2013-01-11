@@ -37,7 +37,8 @@ class AjaxController extends \Zend\Mvc\Controller\AbstractActionController
 		/** @var $request \Zend\Http\PhpEnvironment\Request */
 		$request = $this->getRequest();
 		$response = $this->getResponse();
-
+		
+		$response->getHeaders()->addHeaderLine('ZfJoacubFormJqueryValidate', true);
 		$data = $request->getPost()->toArray();
 
 		$params = $data['dispatch'];
@@ -73,7 +74,7 @@ class AjaxController extends \Zend\Mvc\Controller\AbstractActionController
 		{
 			$messages = $filter->getMessages();
 			$messages = $messages[$fieldName];
-			$result = (count($messages) > 0) ? current($messages) : false;
+			$result = (count($messages) > 0) ? implode('<br>', $messages) : false;
 		}
 		else
 		{
