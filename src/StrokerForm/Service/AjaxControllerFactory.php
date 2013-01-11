@@ -8,10 +8,10 @@
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Service;
+namespace ZfJoacubFormJqueryValidate\Service;
 
 use Zend\ServiceManager\FactoryInterface;
-use StrokerForm\Controller\AjaxController;
+use ZfJoacubFormJqueryValidate\Controller\AjaxController;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class AjaxControllerFactory implements FactoryInterface
@@ -25,7 +25,7 @@ class AjaxControllerFactory implements FactoryInterface
 	public function createService(ServiceLocatorInterface $serviceLocator)
 	{
 		$locator = $serviceLocator->getServiceLocator();
-		$formManager = $locator->get('StrokerForm\FormManager');
+		$formManager = $locator->get('ZfJoacubFormJqueryValidate\FormManager');
 		$controller = new AjaxController($formManager);
 		return $controller;
 	}

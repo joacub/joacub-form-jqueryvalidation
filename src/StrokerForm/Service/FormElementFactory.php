@@ -2,16 +2,16 @@
 /**
  * Description
  *
- * @category  StrokerForm
- * @package   StrokerForm\Service
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Service
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Service;
+namespace ZfJoacubFormJqueryValidate\Service;
 
 use Zend\ServiceManager\FactoryInterface;
-use StrokerForm\View\Helper\FormElement;
+use ZfJoacubFormJqueryValidate\View\Helper\FormElement;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class FormElementFactory implements FactoryInterface

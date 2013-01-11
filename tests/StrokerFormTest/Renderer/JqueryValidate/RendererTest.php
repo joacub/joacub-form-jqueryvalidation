@@ -2,16 +2,16 @@
 /**
  * RendererTest
  *
- * @category  StrokerFormTest
- * @package   StrokerFormTest\Renderer
+ * @category  ZfJoacubFormJqueryValidateTest
+ * @package   ZfJoacubFormJqueryValidateTest\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerFormTest\Renderer\JqueryValidate;
+namespace ZfJoacubFormJqueryValidateTest\Renderer\JqueryValidate;
 
 use Zend\Form\Factory;
-use StrokerForm\Renderer\JqueryValidate\Renderer;
+use ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Renderer;
 
 class RendererTest extends \PHPUnit_Framework_TestCase
 {
@@ -21,7 +21,7 @@ class RendererTest extends \PHPUnit_Framework_TestCase
 	private $renderer;
 
 	/**
-	 * @var \StrokerForm\Renderer\JqueryValidate\Options
+	 * @var \ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Options
 	 */
 	private $rendererOptions;
 
@@ -50,7 +50,7 @@ class RendererTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function setUp()
 	{
-        $this->formManager = \Mockery::mock('StrokerForm\FormManager');
+        $this->formManager = \Mockery::mock('ZfJoacubFormJqueryValidate\FormManager');
 		$this->renderer = new Renderer();
         $this->renderer->setFormManager($this->formManager);
 		$this->view = new \Zend\View\Renderer\PhpRenderer();
@@ -62,7 +62,7 @@ class RendererTest extends \PHPUnit_Framework_TestCase
 			->shouldReceive('translate')
 			->andReturnUsing(function($string) { return $string; } )
 			->getMock();
-		$this->rendererOptions = new \StrokerForm\Renderer\JqueryValidate\Options();
+		$this->rendererOptions = new \ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Options();
 		$this->renderer->setHttpRouter($this->routerMock);
 		$this->renderer->setTranslator($this->translatorMock);
 		$this->renderer->setOptions($this->rendererOptions);

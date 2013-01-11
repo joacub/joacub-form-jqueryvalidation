@@ -2,17 +2,17 @@
 /**
  * Renderer for the jquery.validate plugin
  *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Renderer\JqueryValidate;
+namespace ZfJoacubFormJqueryValidate\Renderer\JqueryValidate;
 
 use Zend\View\Renderer\PhpRenderer as View;
 use Zend\Form\FormInterface;
-use StrokerForm\Renderer\AbstractValidateRenderer;
+use ZfJoacubFormJqueryValidate\Renderer\AbstractValidateRenderer;
 use Zend\Validator\ValidatorInterface;
 use Zend\Form\ElementInterface;
 
@@ -56,7 +56,7 @@ class Renderer extends AbstractValidateRenderer
 
 		if ($this->getOptions()->isIncludeAssets())
 		{
-			$assetBaseUri = $this->getHttpRouter()->assemble(array(), array('name' => 'strokerform-asset'));
+			$assetBaseUri = $this->getHttpRouter()->assemble(array(), array('name' => 'ZfJoacubFormJqueryValidate-asset'));
 			$inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.js');
 			if ($this->getOptions()->isUseTwitterBootstrap() === true)
 			{
@@ -108,7 +108,7 @@ class Renderer extends AbstractValidateRenderer
 		else
 		{
 			//fallback ajax
-			$ajaxUri = $this->getHttpRouter()->assemble(array('form' => $formAlias), array('name' => 'strokerform-ajax-validate'));
+			$ajaxUri = $this->getHttpRouter()->assemble(array('form' => $formAlias), array('name' => 'ZfJoacubFormJqueryValidate-ajax-validate'));
 			$rules = array(
 				'remote' => array(
 					'url' => $ajaxUri,
@@ -151,7 +151,7 @@ class Renderer extends AbstractValidateRenderer
 	 */
 	protected function getRule(ValidatorInterface $validator = null)
 	{
-		$ruleClass = 'StrokerForm\\Renderer\\JqueryValidate\\Rule\\' . $this->getValidatorClassName($validator);
+		$ruleClass = 'ZfJoacubFormJqueryValidate\\Renderer\\JqueryValidate\\Rule\\' . $this->getValidatorClassName($validator);
 		if (class_exists($ruleClass))
 		{
 			$rule = new $ruleClass;

@@ -8,9 +8,9 @@
  * @version   SVN: $Id$
  */
 
-namespace StrokerFormTest\Controller;
+namespace ZfJoacubFormJqueryValidateTest\Controller;
 
-use StrokerForm\Controller\AjaxController;
+use ZfJoacubFormJqueryValidate\Controller\AjaxController;
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\Router\RouteMatch;
 use Zend\Http\Response;
@@ -53,7 +53,7 @@ class AjaxControllerTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function setUp()
 	{
-		$this->setFormManager(new \StrokerForm\FormManager());
+		$this->setFormManager(new \ZfJoacubFormJqueryValidate\FormManager());
 		$this->controller = new AjaxController($this->getFormManager());
 		$this->request    = new Request();
 		$this->response   = new Response();
@@ -192,7 +192,7 @@ class AjaxControllerTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @return \StrokerForm\FormManager
+	 * @return \ZfJoacubFormJqueryValidate\FormManager
 	 */
 	public function getFormManager()
 	{
@@ -200,9 +200,9 @@ class AjaxControllerTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @param \StrokerForm\FormManager $formManager
+	 * @param \ZfJoacubFormJqueryValidate\FormManager $formManager
 	 */
-	public function setFormManager(\StrokerForm\FormManager $formManager)
+	public function setFormManager(\ZfJoacubFormJqueryValidate\FormManager $formManager)
 	{
 		$this->formManager = $formManager;
 	}

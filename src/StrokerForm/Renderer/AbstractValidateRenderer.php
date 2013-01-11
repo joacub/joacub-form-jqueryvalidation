@@ -8,7 +8,7 @@
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Renderer;
+namespace ZfJoacubFormJqueryValidate\Renderer;
 
 use Zend\View\Renderer\PhpRenderer as View;
 use Zend\Form\FormInterface;

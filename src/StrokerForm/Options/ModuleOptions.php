@@ -2,13 +2,13 @@
 /**
  * Defines all possible options for the module
  *
- * @category  StrokerForm
- * @package   StrokerForm\Options
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Options
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Options;
+namespace ZfJoacubFormJqueryValidate\Options;
 
 use Zend\Stdlib\AbstractOptions;
 use Zend\ServiceManager\ConfigInterface;

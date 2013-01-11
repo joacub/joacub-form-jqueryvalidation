@@ -2,13 +2,13 @@
 /**
  * EmailAddressTest
  *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerFormTest\Renderer\JqueryValidate\Rule;
+namespace ZfJoacubFormJqueryValidateTest\Renderer\JqueryValidate\Rule;
 
 class EmailAddressTest extends AbstractRuleTest
 {
@@ -17,7 +17,7 @@ class EmailAddressTest extends AbstractRuleTest
 	 */
 	protected function createRule()
 	{
-		return new \StrokerForm\Renderer\JqueryValidate\Rule\EmailAddress();
+		return new \ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Rule\EmailAddress();
 	}
 
 	/**

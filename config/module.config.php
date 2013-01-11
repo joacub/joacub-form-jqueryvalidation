@@ -6,7 +6,7 @@ return array(
 		),
 		'renderer_options' => array(
 			'stroker_form.renderer.jqueryvalidate' => array(
-				'options_class' => 'StrokerForm\Renderer\JqueryValidate\Options',
+				'options_class' => 'ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Options',
 				'include_assets' => true,
 				'use_twitter_bootstrap' => true,
 				'validateOptions' => array(
@@ -18,17 +18,17 @@ return array(
 	),
 	'router' => array(
 		'routes' => array(
-			'strokerform-ajax-validate' => array(
+			'ZfJoacubFormJqueryValidate-ajax-validate' => array(
 				'type' => 'Segment',
 				'options' => array(
 					'route' => '/form/validate-ajax/:form',
 					'defaults' => array(
-						'controller' => 'StrokerForm\Controller\Ajax',
+						'controller' => 'ZfJoacubFormJqueryValidate\Controller\Ajax',
 						'action' => 'validate',
 					),
 				)
 			),
-			'strokerform-asset' => array(
+			'ZfJoacubFormJqueryValidate-asset' => array(
 				'type' => 'Literal',
 				'options' => array(
 					'route' => '/assets',

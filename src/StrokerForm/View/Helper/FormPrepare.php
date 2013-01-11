@@ -2,17 +2,17 @@
 /**
  * This view helper makes the view and form available in the renderers
  *
- * @category  StrokerForm
- * @package   StrokerForm\View
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\View
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\View\Helper;
+namespace ZfJoacubFormJqueryValidate\View\Helper;
 
 use Zend\Form\View\Helper\AbstractHelper;
 use Zend\Form\FormInterface;
-use StrokerForm\Renderer\RendererInterface;
+use ZfJoacubFormJqueryValidate\Renderer\RendererInterface;
 use Zend\Form\Form;
 
 class FormPrepare extends AbstractHelper

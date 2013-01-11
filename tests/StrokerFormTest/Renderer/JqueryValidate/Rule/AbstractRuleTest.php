@@ -2,15 +2,15 @@
 /**
  * Description
  *
- * @category  StrokerFormTest
- * @package   StrokerFormTest\Renderer
+ * @category  ZfJoacubFormJqueryValidateTest
+ * @package   ZfJoacubFormJqueryValidateTest\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerFormTest\Renderer\JqueryValidate\Rule;
+namespace ZfJoacubFormJqueryValidateTest\Renderer\JqueryValidate\Rule;
 
-use StrokerForm\Renderer\JqueryValidate\Rule\RuleInterface;
+use ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Rule\RuleInterface;
 use Zend\Validator\ValidatorInterface;
 
 abstract class AbstractRuleTest extends \PHPUnit_Framework_TestCase

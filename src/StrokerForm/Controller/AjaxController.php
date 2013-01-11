@@ -2,15 +2,15 @@
 /**
  * Ajax controller. Used for validating forms through ajax
  *
- * @category  StrokerForm
- * @package   StrokerForm\Controller
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Controller
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Controller;
+namespace ZfJoacubFormJqueryValidate\Controller;
 
-use StrokerForm\FormManager;
+use ZfJoacubFormJqueryValidate\FormManager;
 
 class AjaxController extends \Zend\Mvc\Controller\AbstractActionController
 {
@@ -77,7 +77,7 @@ class AjaxController extends \Zend\Mvc\Controller\AbstractActionController
 	}
 
 	/**
-	 * @return \StrokerForm\FormManager
+	 * @return \ZfJoacubFormJqueryValidate\FormManager
 	 */
 	public function getFormManager()
 	{
@@ -85,7 +85,7 @@ class AjaxController extends \Zend\Mvc\Controller\AbstractActionController
 	}
 
 	/**
-	 * @param \StrokerForm\FormManager $formManager
+	 * @param \ZfJoacubFormJqueryValidate\FormManager $formManager
 	 */
 	public function setFormManager($formManager)
 	{

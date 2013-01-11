@@ -2,14 +2,14 @@
 /**
  * Options for renderers
  *
- * @category   StrokerForm
- * @package    StrokerForm\Renderer
+ * @category   ZfJoacubFormJqueryValidate
+ * @package    ZfJoacubFormJqueryValidate\Renderer
  * @subpackage JqueryValidate
  * @copyright  2012 Bram Gerritsen
  * @version    SVN: $Id$
  */
 
-namespace StrokerForm\Renderer;
+namespace ZfJoacubFormJqueryValidate\Renderer;
 
 use Zend\Stdlib\AbstractOptions;
 

@@ -1,7 +1,7 @@
 <phpunit bootstrap="./tests/Bootstrap.php" colors="true">
     <testsuites>
-        <testsuite name="StrokerForm Module Tests">
-            <directory>./tests/StrokerFormTest</directory>
+        <testsuite name="ZfJoacubFormJqueryValidate Module Tests">
+            <directory>./tests/ZfJoacubFormJqueryValidateTest</directory>
         </testsuite>
     </testsuites>
 </phpunit>

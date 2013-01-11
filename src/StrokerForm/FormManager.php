@@ -2,13 +2,13 @@
 /**
  * Form manager
  *
- * @category  StrokerForm
- * @package   StrokerForm
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm;
+namespace ZfJoacubFormJqueryValidate;
 
 use Zend\ServiceManager\AbstractPluginManager;
 use Zend\Form\FormInterface;

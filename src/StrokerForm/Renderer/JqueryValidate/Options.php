@@ -2,16 +2,16 @@
 /**
  * Options for the jquery validate renderer
  *
- * @category   StrokerForm
- * @package    StrokerForm\Renderer
+ * @category   ZfJoacubFormJqueryValidate
+ * @package    ZfJoacubFormJqueryValidate\Renderer
  * @subpackage JqueryValidate
  * @copyright  2012 Bram Gerritsen
  * @version    SVN: $Id$
  */
 
-namespace StrokerForm\Renderer\JqueryValidate;
+namespace ZfJoacubFormJqueryValidate\Renderer\JqueryValidate;
 
-class Options extends \StrokerForm\Renderer\Options
+class Options extends \ZfJoacubFormJqueryValidate\Renderer\Options
 {
 	/**
 	 * @var array

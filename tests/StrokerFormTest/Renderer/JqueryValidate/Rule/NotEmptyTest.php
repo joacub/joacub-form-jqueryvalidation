@@ -2,13 +2,13 @@
 /**
  * NotEmptyTest
  *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerFormTest\Renderer\JqueryValidate\Rule;
+namespace ZfJoacubFormJqueryValidateTest\Renderer\JqueryValidate\Rule;
 
 use Zend\Validator\NotEmpty;
 
@@ -19,7 +19,7 @@ class NotEmptyTest extends AbstractRuleTest
 	 */
 	protected function createRule()
 	{
-		return new \StrokerForm\Renderer\JqueryValidate\Rule\NotEmpty();
+		return new \ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Rule\NotEmpty();
 	}
 
 	/**

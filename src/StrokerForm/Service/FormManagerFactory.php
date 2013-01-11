@@ -8,10 +8,10 @@
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Service;
+namespace ZfJoacubFormJqueryValidate\Service;
 
 use Zend\ServiceManager\ServiceLocatorInterface;
-use StrokerForm\FormManager;
+use ZfJoacubFormJqueryValidate\FormManager;
 
 class FormManagerFactory implements \Zend\ServiceManager\FactoryInterface
 {
@@ -23,8 +23,8 @@ class FormManagerFactory implements \Zend\ServiceManager\FactoryInterface
 	 */
 	public function createService(ServiceLocatorInterface $serviceLocator)
 	{
-		/** @var $moduleOptions \StrokerForm\Options\ModuleOptions  */
-		$moduleOptions = $serviceLocator->get('StrokerForm\Options\ModuleOptions');
+		/** @var $moduleOptions \ZfJoacubFormJqueryValidate\Options\ModuleOptions  */
+		$moduleOptions = $serviceLocator->get('ZfJoacubFormJqueryValidate\Options\ModuleOptions');
 		return new FormManager($moduleOptions->getForms());
 	}
 }

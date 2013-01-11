@@ -2,13 +2,13 @@
 /**
  * LessThanTest
  *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerFormTest\Renderer\JqueryValidate\Rule;
+namespace ZfJoacubFormJqueryValidateTest\Renderer\JqueryValidate\Rule;
 
 class LessThanTest extends AbstractRuleTest
 {
@@ -17,7 +17,7 @@ class LessThanTest extends AbstractRuleTest
 	 */
 	protected function createRule()
 	{
-		return new \StrokerForm\Renderer\JqueryValidate\Rule\LessThan();
+		return new \ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Rule\LessThan();
 	}
 
 	/**

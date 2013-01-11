@@ -8,7 +8,7 @@
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Renderer;
+namespace ZfJoacubFormJqueryValidate\Renderer;
 
 class RendererCollectionTest extends \PHPUnit_Framework_TestCase
 {
@@ -22,10 +22,10 @@ class RendererCollectionTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function setUp()
 	{
-		$this->rendererCollection = new RendererCollection($this->getMock('StrokerForm\FormManager'));
+		$this->rendererCollection = new RendererCollection($this->getMock('ZfJoacubFormJqueryValidate\FormManager'));
 		for ($i = 0; $i < 3; $i++)
 		{
-			$renderer = $this->getMock('StrokerForm\Renderer\RendererInterface');
+			$renderer = $this->getMock('ZfJoacubFormJqueryValidate\Renderer\RendererInterface');
 			$this->rendererCollection->addRenderer($renderer);
 		}
 	}

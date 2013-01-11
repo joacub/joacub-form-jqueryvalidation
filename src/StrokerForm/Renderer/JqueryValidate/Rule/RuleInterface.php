@@ -2,13 +2,13 @@
 /**
  * RuleInterface
  *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Renderer\JqueryValidate\Rule;
+namespace ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Rule;
 
 interface RuleInterface
 {

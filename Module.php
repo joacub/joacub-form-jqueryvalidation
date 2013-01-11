@@ -1,13 +1,13 @@
 <?php
 /**
- * StrokerForm module
+ * ZfJoacubFormJqueryValidate module
  *
- * @category  StrokerForm
- * @package   StrokerForm
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
-namespace StrokerForm;
+namespace ZfJoacubFormJqueryValidate;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
@@ -47,13 +47,13 @@ class Module implements
 	{
 		return array(
 			'factories' => array(
-				'StrokerForm\Options\ModuleOptions' => 'StrokerForm\Service\ModuleOptionsFactory',
-				'StrokerForm\FormManager' => 'StrokerForm\Service\FormManagerFactory',
-				'stroker_form.renderer' => 'StrokerForm\Service\RendererFactory',
-				'forminput' => 'StrokerForm\Service\FormInputFactory',
+				'ZfJoacubFormJqueryValidate\Options\ModuleOptions' => 'ZfJoacubFormJqueryValidate\Service\ModuleOptionsFactory',
+				'ZfJoacubFormJqueryValidate\FormManager' => 'ZfJoacubFormJqueryValidate\Service\FormManagerFactory',
+				'stroker_form.renderer' => 'ZfJoacubFormJqueryValidate\Service\RendererFactory',
+				'forminput' => 'ZfJoacubFormJqueryValidate\Service\FormInputFactory',
 			),
 			'invokables' => array (
-				'stroker_form.renderer.jqueryvalidate' => 'StrokerForm\Renderer\JqueryValidate\Renderer',
+				'stroker_form.renderer.jqueryvalidate' => 'ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Renderer',
 			),
 		);
 	}
@@ -78,7 +78,7 @@ class Module implements
 	{
 		return array(
 			'factories' => array(
-				'StrokerForm\Controller\Ajax' => 'StrokerForm\Service\AjaxControllerFactory'
+				'ZfJoacubFormJqueryValidate\Controller\Ajax' => 'ZfJoacubFormJqueryValidate\Service\AjaxControllerFactory'
 			),
 		);
 	}
@@ -93,8 +93,8 @@ class Module implements
 	{
 		return array(
 			'factories' => array(
-				'form_element' => 'StrokerForm\Service\FormElementFactory',
-				'strokerFormPrepare' => 'StrokerForm\Service\FormPrepareFactory'
+				'form_element' => 'ZfJoacubFormJqueryValidate\Service\FormElementFactory',
+				'ZfJoacubFormJqueryValidatePrepare' => 'ZfJoacubFormJqueryValidate\Service\FormPrepareFactory'
 			)
 		);
 	}

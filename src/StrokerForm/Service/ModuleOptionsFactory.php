@@ -2,16 +2,16 @@
 /**
  * Description
  *
- * @category  StrokerForm
- * @package   StrokerForm\Options
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Options
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Service;
+namespace ZfJoacubFormJqueryValidate\Service;
 
 use Zend\ServiceManager\FactoryInterface;
-use StrokerForm\Options\ModuleOptions;
+use ZfJoacubFormJqueryValidate\Options\ModuleOptions;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class ModuleOptionsFactory implements FactoryInterface

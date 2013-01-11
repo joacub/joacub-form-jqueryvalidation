@@ -2,18 +2,18 @@
 /**
  * Abstract form renderer
  *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
+ * @category  ZfJoacubFormJqueryValidate
+ * @package   ZfJoacubFormJqueryValidate\Renderer
  * @copyright 2012 Bram Gerritsen
  * @version   SVN: $Id$
  */
 
-namespace StrokerForm\Renderer;
+namespace ZfJoacubFormJqueryValidate\Renderer;
 
 use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\I18n\Translator\Translator;
 use Zend\Stdlib\AbstractOptions;
-use StrokerForm\FormManager;
+use ZfJoacubFormJqueryValidate\FormManager;
 
 abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInterface
 {

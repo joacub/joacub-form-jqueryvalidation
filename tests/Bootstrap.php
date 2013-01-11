@@ -16,7 +16,7 @@
 * and is licensed under the MIT license.
 */
 
-namespace StrokerFormTest;
+namespace ZfJoacubFormJqueryValidateTest;
 
 use Zend\Loader\AutoloaderFactory;
 use RuntimeException;
