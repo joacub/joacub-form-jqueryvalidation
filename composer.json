@@ -1,5 +1,5 @@
 {
-    "name": "stroker/form",
+    "name": "joacub/joacub-form-jqueryvalidate",
     "description": "ZF2 module for extending forms with live clientside validation",
     "type": "library",
     "license": "MIT",
