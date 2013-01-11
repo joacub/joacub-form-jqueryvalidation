@@ -1,11 +1,11 @@
 <?php
 return array(
-	'stroker_form' => array(
+	'zf_joacub_form_jquery_validate' => array(
 		'activeRenderers' => array(
-			'stroker_form.renderer.jqueryvalidate',
+			'zf_joacub_form_jquery_validate.renderer.jqueryvalidate',
 		),
 		'renderer_options' => array(
-			'stroker_form.renderer.jqueryvalidate' => array(
+			'zf_joacub_form_jquery_validate.renderer.jqueryvalidate' => array(
 				'options_class' => 'ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Options',
 				'include_assets' => true,
 				'use_twitter_bootstrap' => true,
@@ -36,4 +36,11 @@ return array(
 			),
 		)
 	),
+    'asset_manager' => array(
+        'resolver_configs' => array(
+            'paths' => array(
+                __DIR__ . '/../assets',
+            )
+        ),
+    ),
 );

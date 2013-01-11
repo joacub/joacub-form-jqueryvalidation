@@ -24,7 +24,7 @@ class FormElementFactory implements FactoryInterface
 	 */
 	public function createService(ServiceLocatorInterface $serviceLocator)
 	{
-		$renderer = $serviceLocator->getServiceLocator()->get('stroker_form.renderer');
+		$renderer = $serviceLocator->getServiceLocator()->get('zf_joacub_form_jquery_validate.renderer');
 		return new FormElement($renderer);
 	}
 }

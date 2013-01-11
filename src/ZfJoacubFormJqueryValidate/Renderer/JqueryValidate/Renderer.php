@@ -56,7 +56,7 @@ class Renderer extends AbstractValidateRenderer
 
 		if ($this->getOptions()->isIncludeAssets())
 		{
-			$assetBaseUri = $this->getHttpRouter()->assemble(array(), array('name' => 'ZfJoacubFormJqueryValidate-asset'));
+			$assetBaseUri = $this->getRouter()->assemble(array(), array('name' => 'ZfJoacubFormJqueryValidate-asset'));
 			$inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.js');
 			if ($this->getOptions()->isUseTwitterBootstrap() === true)
 			{
@@ -108,11 +108,12 @@ class Renderer extends AbstractValidateRenderer
 		else
 		{
 			//fallback ajax
-			$ajaxUri = $this->getHttpRouter()->assemble(array('form' => $formAlias), array('name' => 'ZfJoacubFormJqueryValidate-ajax-validate'));
+			$ajaxUri = $this->getRouter()->assemble(array('form' => $formAlias), array('name' => 'ZfJoacubFormJqueryValidate-ajax-validate'));
 			$rules = array(
 				'remote' => array(
 					'url' => $ajaxUri,
-					'type' => 'POST'
+					'type' => 'POST',
+				    'data' => array('dispatch' => $this->getParams()->fromRoute())
 				)
 			);
 			$messages = array();

@@ -33,11 +33,12 @@ class RendererFactory implements FactoryInterface
 			$renderer = $serviceLocator->get($rendererAlias);
 			$renderer->setOptions($options->getRendererOptions($rendererAlias));
             $renderer->setFormManager($serviceLocator->get('ZfJoacubFormJqueryValidate\FormManager'));
+            $renderer->setParams($serviceLocator->get('controllerpluginmanager')->get('params'));
 			if ($serviceLocator->has('translator'))
 			{
 				$renderer->setTranslator($serviceLocator->get('translator'));
 			}
-			$renderer->setHttpRouter($serviceLocator->get('HttpRouter'));
+			$renderer->setRouter($serviceLocator->get('router'));
 			$rendererCollection->addRenderer($renderer);
 		}
 		return $rendererCollection;

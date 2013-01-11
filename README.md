@@ -76,7 +76,7 @@ Now let's add our new factory to the formManager.
 ```php
 <?php
 return array(
-    'stroker_form' => array(
+    'zf_joacub_form_jquery_validate' => array(
         'forms' => array(
             'factories' => array(
                 'my_form_alias' => 'MyProject\Service\MyFormFactory'

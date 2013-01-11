@@ -51,7 +51,7 @@ interface RendererInterface
 	 * @param \Zend\Mvc\Router\RouteInterface $route
 	 * @return mixed
 	 */
-	public function setHttpRouter(RouteInterface $route);
+	public function setRouter(RouteInterface $route);
 
 	/**
 	 * Set renderer options

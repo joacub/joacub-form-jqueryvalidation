@@ -40,6 +40,11 @@ class AjaxController extends \Zend\Mvc\Controller\AbstractActionController
 
 		$data = $request->getPost()->toArray();
 
+		$params = $data['dispatch'];
+		unset($data['dispatch']);
+		$controller = $params['controller'];
+		unset($params['controller']);
+		
 		if (count($data) > 1)
 		{
 			throw new \InvalidArgumentException('Validating multiple fields is not allowed');
@@ -48,9 +53,12 @@ class AjaxController extends \Zend\Mvc\Controller\AbstractActionController
 		{
 			throw new \InvalidArgumentException('No input data received');
 		}
-
 		$formAlias = $this->getEvent()->getRouteMatch()->getParam('form');
 
+		if(!$this->getFormManager()->has($formAlias)) {
+		    $this->forward()->dispatch($controller, $params);
+		}
+		
 		/** @var $form \Zend\Form\Form */
 		$form = $this->getFormManager()->get($formAlias);
 

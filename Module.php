@@ -49,11 +49,11 @@ class Module implements
 			'factories' => array(
 				'ZfJoacubFormJqueryValidate\Options\ModuleOptions' => 'ZfJoacubFormJqueryValidate\Service\ModuleOptionsFactory',
 				'ZfJoacubFormJqueryValidate\FormManager' => 'ZfJoacubFormJqueryValidate\Service\FormManagerFactory',
-				'stroker_form.renderer' => 'ZfJoacubFormJqueryValidate\Service\RendererFactory',
+				'zf_joacub_form_jquery_validate.renderer' => 'ZfJoacubFormJqueryValidate\Service\RendererFactory',
 				'forminput' => 'ZfJoacubFormJqueryValidate\Service\FormInputFactory',
 			),
 			'invokables' => array (
-				'stroker_form.renderer.jqueryvalidate' => 'ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Renderer',
+				'zf_joacub_form_jquery_validate.renderer.jqueryvalidate' => 'ZfJoacubFormJqueryValidate\Renderer\JqueryValidate\Renderer',
 			),
 		);
 	}

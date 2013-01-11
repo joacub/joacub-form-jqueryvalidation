@@ -25,7 +25,7 @@ class ModuleOptionsFactory implements FactoryInterface
 	public function createService(ServiceLocatorInterface $serviceLocator)
 	{
 		$options = $serviceLocator->get('Config');
-		$options = isset($options['stroker_form']) ? $options['stroker_form'] : null;
+		$options = isset($options['zf_joacub_form_jquery_validate']) ? $options['zf_joacub_form_jquery_validate'] : null;
 
 		if (null === $options) {
 			throw new RuntimeException(sprintf(
