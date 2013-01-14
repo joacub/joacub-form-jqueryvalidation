@@ -28,11 +28,4 @@ interface RuleInterface
      */
 	public function getMessages(\Zend\Validator\ValidatorInterface $validator);
 
-	/**
-	 * Set the translator
-	 *
-	 * @param \Zend\I18n\Translator\Translator $translator
-	 * @return mixed
-	 */
-	public function setTranslator(\Zend\I18n\Translator\Translator $translator = null);
 }
