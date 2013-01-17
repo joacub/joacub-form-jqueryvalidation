@@ -78,7 +78,7 @@ class Renderer extends AbstractValidateRenderer
 		}
 
 		return '$(document).ready(function(){
-		$(\'#'.$form->getName().'\').validate({' . $validateOptions . '
+		$(\'#'.$form->getAttribute('id').'\').validate({' . $validateOptions . '
 		rules: '.\Zend\Json\Json::encode($this->rules).',
 		messages: '.\Zend\Json\Json::encode($this->messages).',
 		});
