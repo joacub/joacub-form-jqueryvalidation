@@ -59,12 +59,12 @@ $.extend($.validator.defaults, {
         }
     },
     unhighlight: function (element, errorClass, validClass) {
-        var addon = $(element).parent('div.input-prepend, div.input-append');
+    	var addon = $(element).parent('div.input-prepend, div.input-append');
         if (element.type === 'radio') {
             $(element).closest('div').parent('div').removeClass(errorClass).addClass(validClass);
         } else {
             $(element).closest('div.control-group').removeClass(errorClass).addClass(validClass);
-            //$(element).next('span.help-inline').text('');
+            $(element).next('span.help-inline').text('');
         }
     },
     errorPlacement: function(error, element) {
@@ -75,7 +75,8 @@ $.extend($.validator.defaults, {
             afterElement = $(element).closest('div.controls').children('label').filter(':last');
             error.insertAfter(afterElement);
         }else if (isInputAppend) {
-            appendElement = $(element).next('span.add-on');
+            //appendElement = $(element).next('span.add-on');
+        	appendElement = $(element).closest('.input-append');
             error.insertAfter(appendElement);
         }else {
             error.insertAfter(element);
