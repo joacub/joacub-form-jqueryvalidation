@@ -1,15 +1,15 @@
-# ZfJoacubFormJqueryValidate
+# StrokerForm
 
 ZF2 module for extending forms with live clientside validation without need to write js validation code. 
 You only need to define your validation rules server side with ZF2 and this module automaticaly adds the same rules with [jQueryValidate](http://docs.jquery.com/Plugins/Validation). 
 In case a client side version of the validation rule doesn't exist a fallback is done using ajax.
-For basic usage examples see the sandbox project [ZfJoacubFormJqueryValidateSandbox](https://github.com/bramstroker/zf2-form-sandbox).
+For basic usage examples see the sandbox project [StrokerFormSandbox](https://github.com/bramstroker/zf2-form-sandbox).
 
 [![Build Status](https://travis-ci.org/bramstroker/zf2-form.png?branch=master)](https://travis-ci.org/bramstroker/zf2-form)
 
 ## Installation
 
-Installation of ZfJoacubFormJqueryValidate uses composer. For composer documentation, please refer to
+Installation of StrokerForm uses composer. For composer documentation, please refer to
 [getcomposer.org](http://getcomposer.org/).
 
   1. `cd my/project/directory`
@@ -28,7 +28,7 @@ Installation of ZfJoacubFormJqueryValidate uses composer. For composer documenta
   4. open `my/project/directory/configs/application.config.php` and add the following key to your `modules`:
 
      ```php
-     'ZfJoacubFormJqueryValidate',
+     'StrokerForm',
      ```
   5. copy the assets to your public folder (my/project/directory/public).
 
@@ -76,7 +76,7 @@ Now let's add our new factory to the formManager.
 ```php
 <?php
 return array(
-    'zf_joacub_form_jquery_validate' => array(
+    'stroker_form' => array(
         'forms' => array(
             'factories' => array(
                 'my_form_alias' => 'MyProject\Service\MyFormFactory'
@@ -86,12 +86,12 @@ return array(
 );
 ```
 
-Last thing we need to do is invoking the ZfJoacubFormJqueryValidatePrepare view helper where you are rendering your form.
+Last thing we need to do is invoking the StrokerFormPrepare view helper where you are rendering your form.
 This view helper add all the needed javascripts to the headScript view helper
 
 ```php
 <?php
-echo $this->ZfJoacubFormJqueryValidatePrepare('my_form_alias');
+echo $this->strokerFormPrepare('my_form_alias');
 
 // Do your normal form rendering here
 ```

@@ -27,8 +27,8 @@
     },
     "autoload": {
         "psr-0": {
-            "ZfJoacubFormJqueryValidate": "src/",
-            "ZfJoacubFormJqueryValidateTest": "tests/"
+            "StrokerForm": "src/",
+            "StrokerFormTest": "tests/"
         },
         "classmap": [
             "./Module.php"
