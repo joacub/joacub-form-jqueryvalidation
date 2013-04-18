@@ -52,10 +52,11 @@ class Renderer extends AbstractValidateRenderer
         parent::preRenderForm($formAlias, $view, $form);
 
         $inlineScript = $view->plugin('inlineScript');
+        $url = $view->plugin('url');
         $inlineScript->appendScript($this->getInlineJavascript($form));
 
         if ($this->getOptions()->isIncludeAssets()) {
-            $assetBaseUri = $this->getHttpRouter()->assemble(array(), array('name' => 'strokerform-asset'));
+            $assetBaseUri = $url->__invoke('strokerform-asset');
             $inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.js');
             if ($this->getOptions()->isUseTwitterBootstrap() === true) {
                 $inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.bootstrap.js');
@@ -74,7 +75,7 @@ class Renderer extends AbstractValidateRenderer
             $validateOptions .= ',';
         }
 
-        return '$(document).ready(function(){
+        return 'jQuery(document).ready(function($){
         $(\'#' . $form->getName() . '\').validate({' . $validateOptions . '
         rules: ' . \Zend\Json\Json::encode($this->rules) . ',
         messages: ' . \Zend\Json\Json::encode($this->messages) . ',
@@ -102,7 +103,7 @@ class Renderer extends AbstractValidateRenderer
             $messages = $rule->getMessages($validator);
         } else {
             //fallback ajax
-            $ajaxUri = $this->getHttpRouter()->assemble(array('form' => $formAlias), array('name' => 'strokerform-ajax-validate'));
+            $ajaxUri = $this->getView()->url('strokerform-ajax-validate', array('form' => $formAlias));
             $rules = array(
                 'remote' => array(
                     'url' => $ajaxUri,

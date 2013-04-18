@@ -11,7 +11,7 @@ return array(
                 'use_twitter_bootstrap' => true,
                 'validateOptions' => array(
                     //'onsubmit : false',
-                    'onkeyup : false',
+                    'onkeyup : true',
                 )
             )
         ),
@@ -36,4 +36,11 @@ return array(
             ),
         )
     ),
+	'asset_manager' => array(
+		'resolver_configs' => array(
+			'paths' => array(
+				__DIR__ . '/../public',
+			),
+		),
+	),
 );

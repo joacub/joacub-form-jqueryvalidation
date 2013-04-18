@@ -14,13 +14,14 @@ use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\I18n\Translator\Translator;
 use Zend\Stdlib\AbstractOptions;
 use StrokerForm\FormManager;
+use Zend\View\Renderer\PhpRenderer;
 
 abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInterface
 {
     /**
      * @var \Zend\Mvc\Router\RouteInterface
      */
-    protected $httpRouter;
+    protected $view;
 
     /**
      * Translator (optional)
@@ -146,17 +147,17 @@ abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInt
     /**
      * @return \Zend\Mvc\Router\RouteInterface
      */
-    public function getHttpRouter()
+    public function getView()
     {
-        return $this->httpRouter;
+        return $this->view;
     }
 
     /**
      * @param \Zend\Mvc\Router\RouteInterface $assetRoute
      */
-    public function setHttpRouter(\Zend\Mvc\Router\RouteInterface $httpRouter)
+    public function setView(PhpRenderer $view)
     {
-        $this->httpRouter = $httpRouter;
+        $this->view = $view;
     }
 
     /**

@@ -13,8 +13,8 @@ namespace StrokerForm\Renderer;
 use Zend\Form\ElementInterface;
 use Zend\Stdlib\AbstractOptions;
 use Zend\Form\FormInterface;
-use Zend\Mvc\Router\RouteInterface;
 use Zend\View\Renderer\PhpRenderer as View;
+use Zend\View\Renderer\PhpRenderer;
 
 interface RendererInterface
 {
@@ -40,7 +40,7 @@ interface RendererInterface
      * @param  \Zend\Mvc\Router\RouteInterface $route
      * @return mixed
      */
-    public function setHttpRouter(RouteInterface $route);
+    public function setView(PhpRenderer $view);
 
     /**
      * Set renderer options

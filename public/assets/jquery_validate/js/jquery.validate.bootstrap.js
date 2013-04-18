@@ -1,3 +1,4 @@
+(function($) {
 $.extend($.validator.prototype, {
     showLabel: function(element, message) {
         var label = this.errorsFor( element );
@@ -44,9 +45,12 @@ $.extend($.validator.prototype, {
     }
 });
 
+}(jQuery));
+
 /**
 
  Setting custom validator defaults to work with twitter bootstrap */
+(function($) {
 $.extend($.validator.defaults, {
     errorClass: 'error',
     validClass: 'success',
@@ -82,6 +86,7 @@ $.extend($.validator.defaults, {
         }
     }
 });
+}(jQuery));
 
 String.prototype.endsWith = function(pattern) {
     var d = this.length - pattern.length;

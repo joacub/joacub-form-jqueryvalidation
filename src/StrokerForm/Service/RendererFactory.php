@@ -35,7 +35,7 @@ class RendererFactory implements FactoryInterface
             if ($serviceLocator->has('translator')) {
                 $renderer->setTranslator($serviceLocator->get('translator'));
             }
-            $renderer->setHttpRouter($serviceLocator->get('HttpRouter'));
+            $renderer->setView($serviceLocator->get('viewrenderer'));
             $rendererCollection->addRenderer($renderer);
         }
 
