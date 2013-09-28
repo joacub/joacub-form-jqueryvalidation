@@ -15,6 +15,7 @@ use Zend\Form\FormInterface;
 use StrokerForm\Renderer\AbstractValidateRenderer;
 use Zend\Validator\ValidatorInterface;
 use Zend\Form\ElementInterface;
+use Zend\Json\Json;
 
 class Renderer extends AbstractValidateRenderer
 {
@@ -70,16 +71,13 @@ class Renderer extends AbstractValidateRenderer
      */
     protected function getInlineJavascript(FormInterface $form)
     {
-        $validateOptions = implode(',', $this->getOptions()->getValidateOptions());
-        if (!empty($validateOptions)) {
-            $validateOptions .= ',';
-        }
+        $validateOptions = $this->getOptions()->getValidateOptions();
+        $validateOptions = array_merge_recursive($validateOptions,  array('rules' => $this->rules, 'messages' => $this->messages));
+        $validateOptions = Json::encode($validateOptions);
 
         return 'jQuery(document).ready(function($){
-        $(\'#' . $form->getName() . '\').validate({' . $validateOptions . '
-        rules: ' . \Zend\Json\Json::encode($this->rules) . ',
-        messages: ' . \Zend\Json\Json::encode($this->messages) . ',
-        });
+        $(\'#' . $form->getName() . '\').validate(' . $validateOptions . '
+        );
         });';
     }
 

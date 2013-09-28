@@ -10,8 +10,8 @@ return array(
                 'include_assets' => true,
                 'use_twitter_bootstrap' => true,
                 'validateOptions' => array(
-                    //'onsubmit : false',
-                    'onkeyup : true',
+                    //'onsubmit' => false',
+                    'onkeyup' => true,
                 )
             )
         ),
