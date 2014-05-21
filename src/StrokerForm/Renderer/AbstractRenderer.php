@@ -15,7 +15,6 @@ use Zend\I18n\Translator\Translator;
 use Zend\Stdlib\AbstractOptions;
 use StrokerForm\FormManager;
 use Zend\View\Renderer\PhpRenderer;
-use Zend\Validator\Translator\TranslatorInterface;
 
 abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInterface
 {
@@ -64,7 +63,7 @@ abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInt
      *                                 Default is null, which skips setTranslatorTextDomain
      * @return AbstractTranslatorHelper
      */
-    public function setTranslator(TranslatorInterface $translator = null, $textDomain = null)
+    public function setTranslator(\Zend\I18n\Translator\TranslatorInterface $translator = null, $textDomain = null)
     {
         $this->translator = $translator;
         if (null !== $textDomain) {
