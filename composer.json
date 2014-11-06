@@ -16,7 +16,7 @@
             "email": "joacub@gmail.com"
         }
     ],
-    "version": "dev-master",
+    "version": "1.0.1",
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
