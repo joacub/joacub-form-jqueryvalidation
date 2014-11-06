@@ -54,7 +54,7 @@ abstract class AbstractRule implements RuleInterface, TranslatorAwareInterface
      * @param  string     $textDomain
      * @return mixed
      */
-    public function setTranslator(TranslatorInterface $translator = null, $textDomain = null)
+    public function setTranslator(Translator $translator = null, $textDomain = null)
     {
         $this->translator = $translator;
 
