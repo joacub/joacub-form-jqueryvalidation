@@ -63,7 +63,7 @@ abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInt
      *                                 Default is null, which skips setTranslatorTextDomain
      * @return AbstractTranslatorHelper
      */
-    public function setTranslator(Translator $translator = null, $textDomain = null)
+    public function setTranslator(\Zend\I18n\Translator\TranslatorInterface $translator = null, $textDomain = null)
     {
         $this->translator = $translator;
         if (null !== $textDomain) {
