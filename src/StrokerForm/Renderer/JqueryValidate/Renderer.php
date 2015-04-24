@@ -53,18 +53,20 @@ class Renderer extends AbstractValidateRenderer
         parent::preRenderForm($formAlias, $view, $form);
 
         $inlineScript = $view->plugin('inlineScript');
-        $url = $view->plugin('url');
+        $basePath = (string) $view->plugin('basepath')->__invoke();
         $inlineScript->appendScript($this->getInlineJavascript($form));
 
         if ($this->getOptions()->isIncludeAssets()) {
-            $assetBaseUri = $url->__invoke('strokerform-asset');
+            $assetBaseUri = $basePath . '/' . $this->getOptions()->getStrokerformAsset();
             $inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.js');
             if ($this->getOptions()->isUseTwitterBootstrap() === true) {
                 $inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.bootstrap.js');
             }
         }
+        
     }
-
+    
+    
     /**
      * @param  \Zend\Form\FormInterface $form
      * @return string

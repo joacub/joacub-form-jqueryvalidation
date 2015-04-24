@@ -19,6 +19,11 @@ class Options extends AbstractOptions
      * @var bool
      */
     private $includeAssets = true;
+    
+    /**
+     * @var string
+     */
+    private $strokerformAsset;
 
     /**
      * @return bool
@@ -34,5 +39,15 @@ class Options extends AbstractOptions
     public function setIncludeAssets($includeAssets)
     {
         $this->includeAssets = $includeAssets;
+    }
+    
+    public function setStrokerformAsset($strokerformAsset)
+    {
+        $this->strokerformAsset = $strokerformAsset;
+    }
+    
+    public function getStrokerformAsset()
+    {
+        return $this->strokerformAsset;
     }
 }

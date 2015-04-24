@@ -8,6 +8,7 @@ return array(
             'stroker_form.renderer.jqueryvalidate' => array(
                 'options_class' => 'StrokerForm\Renderer\JqueryValidate\Options',
                 'include_assets' => true,
+                'strokerform_asset' => '/assets',
                 'use_twitter_bootstrap' => true,
                 'validateOptions' => array(
                     //'onsubmit' => false',
@@ -26,12 +27,6 @@ return array(
                         'controller' => 'StrokerForm\Controller\Ajax',
                         'action' => 'validate',
                     ),
-                )
-            ),
-            'strokerform-asset' => array(
-                'type' => 'Literal',
-                'options' => array(
-                    'route' => '/assets',
                 )
             ),
         )
