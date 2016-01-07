@@ -58,7 +58,7 @@ class Renderer extends AbstractValidateRenderer
         $inlineScript->appendScript($this->getInlineJavascript($form));
 
         if ($this->getOptions()->isIncludeAssets()) {
-            $assetBaseUri = $basePath . '/' . $this->getOptions()->getStrokerformAsset();
+            $assetBaseUri = $basePath . $this->getOptions()->getStrokerformAsset();
             $inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.js');
             if ($this->getOptions()->isUseTwitterBootstrap() === true) {
                 $inlineScript->appendFile($assetBaseUri . '/jquery_validate/js/jquery.validate.bootstrap.js');
