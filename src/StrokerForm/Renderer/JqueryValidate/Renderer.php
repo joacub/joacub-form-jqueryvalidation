@@ -54,6 +54,7 @@ class Renderer extends AbstractValidateRenderer
 
         $inlineScript = $view->plugin('inlineScript');
         $basePath = (string) $view->plugin('basepath')->__invoke();
+        $basePath = ($basePath == '/' ? '' : $basePath);
         $inlineScript->appendScript($this->getInlineJavascript($form));
 
         if ($this->getOptions()->isIncludeAssets()) {
